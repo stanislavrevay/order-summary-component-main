@@ -1,0 +1,140 @@
+@import "config";
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: $pale-blue;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-stack;
+}
+
+.background-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.order-component {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #fff;
+  height: 680px;
+  width: 420px;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0px 10px 60px $desaturated-blue;
+
+  .illustration {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .order-header {
+    h1 {
+      margin: 0.6rem auto 0.6rem auto;
+      color: $dark-blue;
+      font-weight: 900;
+    }
+  }
+  p {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.6rem 2rem;
+    font-weight: 500;
+    color: $desaturated-blue;
+  }
+
+  .order-plan {
+    width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $very-pale-blue;
+    border-radius: $border-radius-inner;
+
+    img {
+      padding: 1.4rem 1.4rem;
+    }
+    .order-plan-info {
+      h2 {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        padding: 0.2rem 0;
+        text-align: left;
+      }
+    }
+
+    a {
+      padding-right: 1.4rem;
+      text-align: right;
+      font-size: 0.9rem;
+      flex: 1;
+    }
+
+    a:hover {
+      color: $hover-color;
+      text-decoration: none;
+    }
+  }
+
+  .order-buttons {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .proceed {
+      border: none;
+      width: 80%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: $border-radius-inner;
+      background-color: $bright-blue;
+      box-shadow: 0px 5px 16px 8px $pale-blue;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $hover-color;
+      }
+    }
+
+    .cancel-order {
+      @extend .proceed;
+      color: $desaturated-blue;
+      background: none;
+      padding-top: 1.2rem;
+      box-shadow: none;
+
+      &:hover {
+        background: none;
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .order-component {
+    width: 350px;
+  }
+}
