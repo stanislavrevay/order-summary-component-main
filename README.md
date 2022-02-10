@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot.jpg)
+![](images/screenshot.png)
 
 ### Links
 
@@ -39,5 +39,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.stanislavrevay.com)
+- Website - [Stanislav Revay](https://www.stanislavrevay.com)
 - Frontend Mentor - [@stanislavrevay](https://www.frontendmentor.io/profile/stanislavrevay)
